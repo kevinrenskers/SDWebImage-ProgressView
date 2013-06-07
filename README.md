@@ -27,4 +27,4 @@ Use `nil` for the `progressView` parameter to use the system default `UIProgress
 
 
 ## License
-LastFm is available under the MIT license. See the LICENSE file for more info.
+SDWebImage-ProgressView is available under the MIT license. See the LICENSE file for more info.
