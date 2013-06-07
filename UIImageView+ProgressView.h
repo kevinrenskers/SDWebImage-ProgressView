@@ -1,19 +1,14 @@
-# SDWebImage-ProgressView
-Category on UIImageView, adding a progress view while images are downloaded using SDWebImage.
+//
+//  UIImageView+ProgressView.h
+//
+//  Created by Kevin Renskers on 07-06-13.
+//  Copyright (c) 2013 Kevin Renskers. All rights reserved.
+//
 
+#import "UIImageView+WebCache.h"
 
-## Installation
-Use [Cocoapods](http://cocoapods.org):
+@interface UIImageView (ProgressView)
 
-```
-pod 'SDWebImage-ProgressView'
-```
-
-
-## Usage
-All of SDWebImage's UIView+WebCache methods gained an extra parameter:
-
-```
 - (void)setImageWithURL:(NSURL *)url usingProgressView:(UIProgressView *)progressView;
 - (void)setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder usingProgressView:(UIProgressView *)progressView;
 - (void)setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options usingProgressView:(UIProgressView *)progressView;
@@ -21,10 +16,5 @@ All of SDWebImage's UIView+WebCache methods gained an extra parameter:
 - (void)setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder completed:(SDWebImageCompletedBlock)completedBlock usingProgressView:(UIProgressView *)progressView;
 - (void)setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options completed:(SDWebImageCompletedBlock)completedBlock usingProgressView:(UIProgressView *)progressView;
 - (void)setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletedBlock)completedBlock usingProgressView:(UIProgressView *)progressView;
-```
 
-Use `nil` for the `progressView` parameter to use the system default `UIProgressView`, or provide your own progress view (or subclass thereof) if you want custom styling and tint colors.
-
-
-## License
-LastFm is available under the MIT license. See the LICENSE file for more info.
+@end
