@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SDWebImage-ProgressView"
-  s.version      = "0.1.0"
+  s.version      = "0.2.0"
   s.summary      = "Category on UIImageView, adding a progress view while images are downloaded using SDWebImage."
   s.homepage     = "https://github.com/kevinrenskers/SDWebImage-ProgressView"
   s.license      = 'MIT'

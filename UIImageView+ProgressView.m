@@ -12,20 +12,23 @@
 @implementation UIImageView (ProgressView)
 
 - (void)addProgressView:(UIProgressView *)progressView {
-    if (!progressView) {
-        progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+    UIProgressView *existingProgressView = (UIProgressView *)[self viewWithTag:TAG_PROGRESS_VIEW];
+    if (!existingProgressView) {
+        if (!progressView) {
+            progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+        }
+
+        progressView.tag = TAG_PROGRESS_VIEW;
+
+        // Move to the center
+        float width = progressView.frame.size.width;
+        float height = progressView.frame.size.height;
+        float x = (self.frame.size.width / 2.0) - width/2;
+        float y = (self.frame.size.height / 2.0) - height/2;
+        progressView.frame = CGRectMake(x, y, width, height);
+
+        [self addSubview:progressView];
     }
-
-    progressView.tag = TAG_PROGRESS_VIEW;
-
-    // Move to the center
-    float width = progressView.frame.size.width;
-    float height = progressView.frame.size.height;
-    float x = (self.frame.size.width / 2.0) - width/2;
-    float y = (self.frame.size.height / 2.0) - height/2;
-    progressView.frame = CGRectMake(x, y, width, height);
-
-    [self addSubview:progressView];
 }
 
 - (void)updateProgress:(CGFloat)progress {
