@@ -17,10 +17,10 @@
         if (!progressView) {
             progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
         }
-
+        
         progressView.tag = TAG_PROGRESS_VIEW;
-
-        // Move to the center
+        progressView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
+        
         float width = progressView.frame.size.width;
         float height = progressView.frame.size.height;
         float x = (self.frame.size.width / 2.0) - width/2;
@@ -71,7 +71,7 @@
 
 - (void)setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletedBlock)completedBlock usingProgressView:(UIProgressView *)progressView {
     [self addProgressView:progressView];
-
+    
     __weak typeof(self) weakSelf = self;
 
     [self setImageWithURL:url
