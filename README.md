@@ -1,5 +1,5 @@
 # SDWebImage-ProgressView
-Category on UIImageView, adding a progress view while images are downloaded using SDWebImage.
+Category on UIImageView, adding a progress view while images are downloaded using SDWebImage. [Example on Youtube](http://www.youtube.com/watch?v=qfZrOYYLOPc)
 
 
 ## Installation
