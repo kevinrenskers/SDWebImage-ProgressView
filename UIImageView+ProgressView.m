@@ -12,7 +12,6 @@
 @implementation UIImageView (ProgressView)
 
 - (void)addProgressView:(UIProgressView *)progressView {
-    
     UIProgressView *existingProgressView = (UIProgressView *)[self viewWithTag:TAG_PROGRESS_VIEW];
     if (!existingProgressView) {
         if (!progressView) {
