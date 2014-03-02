@@ -77,7 +77,7 @@
     [self setImageWithURL:url
          placeholderImage:placeholder
                   options:options
-                 progress:^(NSUInteger receivedSize, long long expectedSize) {
+                 progress:^(NSUInteger receivedSize, NSUInteger expectedSize) {
                      CGFloat progress = ((CGFloat)receivedSize / (CGFloat)expectedSize);
                      [weakSelf updateProgress:progress];
                      if (progressBlock) {
