@@ -35,6 +35,9 @@ If you're using the `cancelCurrentImageLoad` method, you'll also have to call `r
 }
 ```
 
+## Thanks
+The idea for this project came from [UIActivityIndicator-for-SDWebImage](https://github.com/JJSaccolo/UIActivityIndicator-for-SDWebImage). A big thank you goes to Giacomo Saccardo.
+
 
 ## License
 SDWebImage-ProgressView is available under the MIT license. See the LICENSE file for more info.
