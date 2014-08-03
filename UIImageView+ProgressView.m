@@ -76,7 +76,10 @@
 
     [self sd_setImageWithURL:url placeholderImage:placeholder options:options progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         CGFloat progress = ((CGFloat)receivedSize / (CGFloat)expectedSize);
-        [weakSelf updateProgress:progress];
+        dispatch_async(dispatch_get_main_queue(), ^{
+             [weakSelf updateProgress:progress];
+        });
+
         if (progressBlock) {
             progressBlock(receivedSize, expectedSize);
         }
