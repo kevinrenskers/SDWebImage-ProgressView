@@ -5,7 +5,7 @@
 //  Copyright (c) 2013 Kevin Renskers. All rights reserved.
 //
 
-#import "UIImageView+WebCache.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface UIImageView (ProgressView)
 
