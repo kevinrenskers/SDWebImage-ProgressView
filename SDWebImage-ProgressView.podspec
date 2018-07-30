@@ -6,8 +6,8 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "Kevin Renskers" => "info@mixedcase.nl" }
   s.source       = { :git => "https://github.com/kevinrenskers/SDWebImage-ProgressView.git", :tag => s.version.to_s }
-  s.platform      = :ios, '5.0'
+  s.platform      = :ios, '7.0'
   s.source_files = '*.{h,m}'
   s.requires_arc = true
-  s.dependency 'SDWebImage', '~> 3.7.0'
+  s.dependency 'SDWebImage'
 end
