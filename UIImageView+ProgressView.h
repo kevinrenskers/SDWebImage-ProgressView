@@ -6,6 +6,7 @@
 //
 
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/SDWebImageDownloader.h>
 
 @interface UIImageView (ProgressView)
 
